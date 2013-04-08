@@ -7,16 +7,6 @@
  * @version 1.2
  */
 jQuery(function($) {
-	// check auto init :
-	$.fn.l = $.fn.livequery || $.fn.each;
-	if (typeof autoinit != 'undefined' && autoinit.stickyzle) {
-		var settings = (typeof autoinit.stickyzle == 'object') ? autoinit.stickyzle : {};
-		$('[data-stickyzle]').l(function() {
-			$(this).stickyzle(settings);
-		});
-	}
-});
-jQuery(function($) {
 	
 	/**
 	 * Plugin :
@@ -255,4 +245,14 @@ jQuery(function($) {
 		}    
 	}
 
+});
+jQuery(function($) {
+	// check auto init :
+	$.fn.l = $.fn.livequery || $.fn.each;
+	if (typeof autoinit != 'undefined' && autoinit.stickyzle) {
+		var settings = (typeof autoinit.stickyzle == 'object') ? autoinit.stickyzle : {};
+		$('[data-stickyzle]').l(function() {
+			$(this).stickyzle(settings);
+		});
+	}
 });
