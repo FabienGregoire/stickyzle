@@ -121,7 +121,6 @@ jQuery(function($) {
 				{
 					if (_this.$refs.parent.offset().top - _this.$refs.window.scrollTop() > 0)
 					{
-						console.log('reset');
 						// reset position because the parent element is not abow the top of screen :
 						$this.css('position','');
 						// remove sticked class :
@@ -134,7 +133,6 @@ jQuery(function($) {
 						$this.removeClass(_this._getSetting('classes.sticked'));
 					} else if ($this.offset().top - _this.$refs.window.scrollTop() < 0)
 					{
-						console.log('fix');
 						// fix the element :
 						$this.css('position', 'fixed').css(_this._getSetting('animatedProp'), 0);
 						// add sticked class :
